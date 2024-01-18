@@ -1,0 +1,76 @@
+### 전체 목록조회
+GET http://localhost:8001/api/v1/products?offset=2
+Content-Type: application/json
+Accept: */*
+
+
+### 상품 조회
+GET http://localhost:8001/api/v1/products-management/1
+Content-Type: application/json
+Accept: */*
+
+
+### 상품 검색
+GET http://localhost:8001/api/v1/products/search?s=국
+Content-Type: application/json
+Accept: */*
+
+### 식사 조회
+GET http://localhost:8001/api/v1/products/meals
+Content-Type: application/json
+Accept: */*
+
+### 디저트 조회
+GET http://localhost:8001/api/v1/products/dessert
+Content-Type: application/json
+Accept: */*
+
+### 음료 조회
+GET http://localhost:8001/api/v1/products/beverage
+Content-Type: application/json
+Accept: */*
+
+### 상품 조회
+GET http://localhost:8001/api/v1/products-management?offset=2
+Content-Type: application/json
+Accept: */*
+
+### 상품 상세정보 조회
+GET http://localhost:8001/api/v1/products-management/12
+Content-Type: application/json
+Accept: */*
+
+### 상품 등록
+POST http://localhost:8001/api/v1/products
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Accept: */*
+
+--WebAppBoundary
+Content-Disposition: form-data; name="productName"
+
+피카츄
+--WebAppBoundary
+Content-Disposition: form-data; name="productPrice"
+
+1000000
+--WebAppBoundary
+Content-Disposition: form-data; name="productDescription"
+
+백만볼트
+--WebAppBoundary
+Content-Disposition: form-data; name="productOrderable"
+
+Y
+--WebAppBoundary
+Content-Disposition: form-data; name="categoryCode"
+
+1
+--WebAppBoundary
+Content-Disposition: form-data; name="productStock"
+
+1
+--WebAppBoundary
+Content-Disposition: form-data; name="productImage"; filename="pikachu.png"
+
+< ./pikachu.png
+--WebAppBoundary--

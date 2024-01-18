@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.2">
+
+    <persistence-unit name="jpatest">
+        <class>com.ohgiraffers.section01.entity.Member</class>
+        <class>com.ohgiraffers.section02.column.Member</class>
+        <class>com.ohgiraffers.section03.primarykey.subsection01.Member</class>
+        <class>com.ohgiraffers.section03.primarykey.subsection02.table.Member</class>
+        <class>com.ohgiraffers.section04.enumtype.Member</class>
+        <class>com.ohgiraffers.section05.access.subsection01.field.Member</class>
+        <class>com.ohgiraffers.section05.access.subsection02.property.Member</class>
+        <class>com.ohgiraffers.section06.compositekey.subsection01.embedded.Member</class>
+        <class>com.ohgiraffers.section06.compositekey.subsection02.idclass.Member</class>
+
+        <properties>
+<!--            데이터 베이스 연결 정보-->
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/ohgiraffers"/>
+            <property name="jakarta.persistence.jdbc.user" value="ohgiraffers"/>
+            <property name="jakarta.persistence.jdbc.password" value="ohgiraffers"/>
+<!--            hibernate 설정-->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+<!--            DML 구문 수행 시 자동으로 스키마 생성(테이블 생성)을 위한 설정 추가 -->
+            <property name="hibernate.hbm2ddl.auto" value="create"/>
+        </properties>
+    </persistence-unit>
+</persistence>
